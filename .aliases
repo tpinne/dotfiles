@@ -9,10 +9,10 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias ws="cd ~/workspace"
 alias g="git"
 alias h="history"
 alias j="jobs"
@@ -162,3 +162,9 @@ alias reload="exec $SHELL -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# Vagrant
+alias vup="vagrant up"
+alias vh="vagrant halt"
+alias vstat="vagrant status"
+alias vssh="vagrant ssh"

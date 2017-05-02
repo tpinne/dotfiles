@@ -5,14 +5,18 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
-	rsync --exclude ".git/" \
-		--exclude ".DS_Store" \
-		--exclude ".osx" \
-		--exclude "bootstrap.sh" \
-		--exclude "README.md" \
-		--exclude "LICENSE-MIT.txt" \
-		-avh --no-perms . ~;
-	source ~/.bash_profile;
+	stow --ignore ".git/" \
+		--ignore "bin" \
+		--ignore "init" \
+		--ignore "oh-my-zsh" \
+		--ignore ".DS_Store" \
+		--ignore ".osx" \
+		--ignore ".macos" \
+		--ignore "bootstrap.sh" \
+		--ignore "README.md" \
+		--ignore "LICENSE-MIT.txt" \
+		.;
+	#source ~/.bash_profile;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

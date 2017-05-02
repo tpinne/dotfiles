@@ -183,3 +183,6 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+[user]
+	email = github@tpinne.de
+	name = Tobias Pinnekamp
